@@ -1,6 +1,10 @@
 -- ============================================
 -- Storage Policies for Interview Videos
 -- Copy and paste this entire file into Supabase SQL Editor
+-- 
+-- IMPORTANT: If you're getting "infinite recursion detected in policy for relations admins" error,
+-- you need to run fix-recursive-policy.sql FIRST, then run this file.
+-- Or better yet, run fix-all-policies.sql which fixes both issues.
 -- ============================================
 
 -- Step 1: Drop existing policies (if they exist)

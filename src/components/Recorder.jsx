@@ -97,12 +97,11 @@ export default function Recorder({ onRecordingComplete, questionNumber, maxTime 
   }
 
   const stopRecording = () => {
-    if (mediaRecorderRef.current && isRecording) {
-      if (mediaRecorderRef.current.state === 'recording') {
-        mediaRecorderRef.current.stop()
-      }
-      // Timer will be cleared in onstop callback
+    if (!mediaRecorderRef.current) return
+    if (mediaRecorderRef.current.state === 'recording') {
+      mediaRecorderRef.current.stop()
     }
+    // Timer will be cleared in onstop callback
   }
 
   const formatTime = (seconds) => {
