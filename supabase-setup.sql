@@ -89,14 +89,15 @@ DROP POLICY IF EXISTS "Users can delete their own videos" ON storage.objects;
 
 -- Allow authenticated users to upload videos to their own folder
 -- Path structure: interviews/{user_id}/{question_number}.webm
--- storage.foldername returns: [1]='interviews', [2]='user_id', etc.
+-- Using split_part to extract path components for reliable policy enforcement
 CREATE POLICY "Users can upload their own videos"
   ON storage.objects
   FOR INSERT
   WITH CHECK (
     bucket_id = 'interview-videos' AND
-    (storage.foldername(name))[1] = 'interviews' AND
-    (storage.foldername(name))[2] = auth.uid()::text
+    auth.role() = 'authenticated' AND
+    split_part(name, '/', 1) = 'interviews' AND
+    split_part(name, '/', 2) = auth.uid()::text
   );
 
 -- Allow anyone to read videos (since bucket is public)
@@ -112,18 +113,20 @@ CREATE POLICY "Users can update their own videos"
   FOR UPDATE
   USING (
     bucket_id = 'interview-videos' AND
-    (storage.foldername(name))[1] = 'interviews' AND
-    (storage.foldername(name))[2] = auth.uid()::text
+    auth.role() = 'authenticated' AND
+    split_part(name, '/', 1) = 'interviews' AND
+    split_part(name, '/', 2) = auth.uid()::text
   );
 
--- Allow users to delete their own videos (optional)
+-- Allow users to delete their own videos (for re-recording)
 -- Path structure: interviews/{user_id}/{question_number}.webm
 CREATE POLICY "Users can delete their own videos"
   ON storage.objects
   FOR DELETE
   USING (
     bucket_id = 'interview-videos' AND
-    (storage.foldername(name))[1] = 'interviews' AND
-    (storage.foldername(name))[2] = auth.uid()::text
+    auth.role() = 'authenticated' AND
+    split_part(name, '/', 1) = 'interviews' AND
+    split_part(name, '/', 2) = auth.uid()::text
   );
 
