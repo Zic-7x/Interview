@@ -1,13 +1,18 @@
 import React, { useRef, useEffect, useState } from 'react'
 
-export default function Recorder({ onRecordingComplete, questionNumber }) {
+export default function Recorder({ onRecordingComplete, questionNumber, maxTime = 60 }) {
   const videoRef = useRef(null)
   const mediaRecorderRef = useRef(null)
   const chunksRef = useRef([])
   const [isRecording, setIsRecording] = useState(false)
-  const [timeRemaining, setTimeRemaining] = useState(60)
+  const [timeRemaining, setTimeRemaining] = useState(maxTime)
   const [stream, setStream] = useState(null)
   const timerRef = useRef(null)
+
+  useEffect(() => {
+    // Reset time remaining when maxTime or questionNumber changes
+    setTimeRemaining(maxTime)
+  }, [maxTime, questionNumber])
 
   useEffect(() => {
     let currentStream = null
@@ -68,7 +73,7 @@ export default function Recorder({ onRecordingComplete, questionNumber }) {
       const blob = new Blob(chunksRef.current, { type: 'video/webm' })
       onRecordingComplete(blob)
       setIsRecording(false)
-      setTimeRemaining(60)
+      setTimeRemaining(maxTime)
       if (timerRef.current) {
         clearInterval(timerRef.current)
       }
@@ -77,7 +82,7 @@ export default function Recorder({ onRecordingComplete, questionNumber }) {
     mediaRecorderRef.current = mediaRecorder
     mediaRecorder.start()
     setIsRecording(true)
-    setTimeRemaining(60)
+    setTimeRemaining(maxTime)
 
     // Start countdown timer
     timerRef.current = setInterval(() => {

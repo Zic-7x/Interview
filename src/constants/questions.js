@@ -1,4 +1,5 @@
 export const INTERVIEW_QUESTIONS = [
+  "Introduce yourself",
   "How do you approach the integration of personalized nutrition in clinical practice? What factors influence your decision-making in customizing a patient's nutrition plan?",
   "Explain the concept of nutrigenomics and how it might influence personalized dietary recommendations.",
   "Can you describe the role of epigenetics in the development of chronic diseases, and how nutrition might modulate this?",
