@@ -5,7 +5,7 @@ export default function Recorder({ onRecordingComplete, questionNumber }) {
   const mediaRecorderRef = useRef(null)
   const chunksRef = useRef([])
   const [isRecording, setIsRecording] = useState(false)
-  const [timeRemaining, setTimeRemaining] = useState(90)
+  const [timeRemaining, setTimeRemaining] = useState(60)
   const [stream, setStream] = useState(null)
   const timerRef = useRef(null)
 
@@ -68,7 +68,7 @@ export default function Recorder({ onRecordingComplete, questionNumber }) {
       const blob = new Blob(chunksRef.current, { type: 'video/webm' })
       onRecordingComplete(blob)
       setIsRecording(false)
-      setTimeRemaining(90)
+      setTimeRemaining(60)
       if (timerRef.current) {
         clearInterval(timerRef.current)
       }
@@ -77,7 +77,7 @@ export default function Recorder({ onRecordingComplete, questionNumber }) {
     mediaRecorderRef.current = mediaRecorder
     mediaRecorder.start()
     setIsRecording(true)
-    setTimeRemaining(90)
+    setTimeRemaining(60)
 
     // Start countdown timer
     timerRef.current = setInterval(() => {

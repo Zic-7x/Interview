@@ -1,6 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { supabase } from '../lib/supabase'
+import Logo from '../components/Logo'
 
 export default function Completed() {
   const navigate = useNavigate()
@@ -13,6 +14,9 @@ export default function Completed() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full bg-white rounded-lg shadow-md p-8 text-center">
+        <div className="mb-4 flex justify-center">
+          <Logo size={40} showText={false} />
+        </div>
         <div className="mb-6">
           <svg
             className="mx-auto h-16 w-16 text-green-500"

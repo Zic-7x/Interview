@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { supabase } from '../lib/supabase'
 import { ADMIN_EMAILS } from '../constants/adminEmails'
 import { INTERVIEW_QUESTIONS } from '../constants/questions'
+import Logo from '../components/Logo'
 
 export default function AdminReview() {
   const [user, setUser] = useState(null)
@@ -155,8 +156,8 @@ export default function AdminReview() {
     <div className="min-h-screen bg-gray-50 py-8 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="bg-white rounded-lg shadow-md p-6 md:p-8">
-          <div className="flex justify-between items-center mb-6">
-            <h1 className="text-2xl font-bold text-gray-900">Admin Review</h1>
+          <div className="flex justify-between items-center mb-6 gap-3">
+            <Logo size={36} showText={true} />
             <button
               onClick={handleSignOut}
               className="text-sm text-gray-600 hover:text-gray-900"
