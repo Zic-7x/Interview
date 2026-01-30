@@ -10,7 +10,7 @@ export const INTERVIEW_QUESTIONS = [
   "Explain the pathophysiology of electrolyte imbalances such as hyponatremia, hypophosphatemia, and hyperkalemia. How does nutrition therapy contribute to both prevention and correction in hospitalized patients?",
   "Describe your role within a multidisciplinary team managing eating disorders. How do you integrate medical nutrition therapy with psychological treatment while maintaining patient engagement and trust?",
   "How do you manage chronic disease patients who are persistently non-adherent to nutrition recommendations? Describe a case where behavioral strategies significantly improved clinical outcomes.",
-  "Describe a clinical or translational nutrition research project you were involved in. What methodology did you use, what were the limitations, and how did the findings influence clinical practice?"
+  "Describe a clinical or translational nutrition research project you were involved in. What methodology did you use, what were the limitations, and how did the findings influence clinical practice?",
   "When critically appraising clinical nutrition research, how do you assess study design, bias, confounding variables, and clinical relevance before applying findings to patient care?",
   "What are the biggest barriers in translating nutrition research into real-world clinical practice, and how have you personally addressed these challenges in your work?",
   "How do you stay current with emerging evidence in clinical nutrition, and how do you differentiate high-quality evidence from low-quality or industry-biased research?",
@@ -29,6 +29,6 @@ export const INTERVIEW_QUESTIONS = [
   "How do you address ethical challenges when evidence-based nutrition recommendations conflict with a patient’s cultural, religious, or personal beliefs?",
   "Discuss ethical dilemmas related to the promotion of supplements or functional foods, particularly in vulnerable populations. How do you ensure patient safety and informed consent?",
   "How do you respond to pressure from patients or organizations to promote popular or restrictive diets when robust clinical evidence is lacking?",
-  "Describe how you would manage a patient requesting an extremely restrictive diet that poses significant health risks. How do you communicate risk while maintaining a therapeutic relationship?"
+  "Describe how you would manage a patient requesting an extremely restrictive diet that poses significant health risks. How do you communicate risk while maintaining a therapeutic relationship?",
 ];
 
