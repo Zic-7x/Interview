@@ -1,34 +1,85 @@
 export const INTERVIEW_QUESTIONS = [
-  "Introduce yourself",
-  "Describe a complex case where you integrated personalized nutrition into clinical care. How did you balance genetic data, biochemical markers, comorbidities, medications, and patient lifestyle when formulating the nutrition plan?",
-  "Explain how nutrigenomics and nutrigenetics differ, and describe a real-world scenario where genetic polymorphisms directly altered your dietary recommendations.",
-  "Discuss the role of epigenetic mechanisms such as DNA methylation and histone modification in chronic disease progression. How can targeted nutritional interventions influence these pathways clinically?",
-  "How do you conduct a comprehensive nutritional assessment in patients with multiple chronic illnesses or active malignancy? Which assessment tools, biomarkers, and functional measures do you prioritize, and why?",
-  "Critically evaluate the clinical relevance of gut microbiome profiling. How do you distinguish actionable findings from non-clinically significant data when designing nutrition therapy?",
-  "Describe your approach to diagnosing and managing protein-energy malnutrition in hospitalized patients. How do you prevent and manage refeeding syndrome in high-risk individuals?",
-  "In critically ill ICU patients with sepsis or multi-organ failure, how do you determine enteral versus parenteral nutrition, and how do you adjust macronutrient delivery during different phases of critical illness?",
-  "Explain the pathophysiology of electrolyte imbalances such as hyponatremia, hypophosphatemia, and hyperkalemia. How does nutrition therapy contribute to both prevention and correction in hospitalized patients?",
-  "Describe your role within a multidisciplinary team managing eating disorders. How do you integrate medical nutrition therapy with psychological treatment while maintaining patient engagement and trust?",
-  "How do you manage chronic disease patients who are persistently non-adherent to nutrition recommendations? Describe a case where behavioral strategies significantly improved clinical outcomes.",
-  "Describe a clinical or translational nutrition research project you were involved in. What methodology did you use, what were the limitations, and how did the findings influence clinical practice?",
-  "When critically appraising clinical nutrition research, how do you assess study design, bias, confounding variables, and clinical relevance before applying findings to patient care?",
-  "What are the biggest barriers in translating nutrition research into real-world clinical practice, and how have you personally addressed these challenges in your work?",
-  "How do you stay current with emerging evidence in clinical nutrition, and how do you differentiate high-quality evidence from low-quality or industry-biased research?",
-  "When faced with conflicting nutrition research (e.g., saturated fat, carbohydrates, or artificial sweeteners), how do you decide what guidance to provide to patients?",
-  "How do you evaluate the safety, efficacy, and regulatory status of dietary supplements and functional foods before recommending them for chronic disease management?",
-  "Describe a situation where your nutrition research or clinical expertise contributed to a change in hospital policy, protocol, or clinical guideline.",
-  "How do you design nutrition therapy for patients with advanced liver disease or end-stage renal disease while balancing metabolic demands, fluid restrictions, and micronutrient risks?",
-  "Explain your approach to nutritional management in oncology patients undergoing chemotherapy or radiation. How do you address cachexia, sarcopenia, and treatment-related side effects?",
-  "Discuss evidence-based nutrition strategies for inflammatory bowel disease. How do you individualize diets for Crohn’s disease versus ulcerative colitis during active flare and remission?",
-  "How do you manage long-term nutritional care after bariatric surgery, including prevention, monitoring, and treatment of micronutrient deficiencies and metabolic complications?",
-  "Critically assess the therapeutic use of ketogenic diets in epilepsy, oncology, or neurodegenerative diseases. What are the metabolic risks and long-term clinical considerations?",
-  "In patients with metabolic syndrome, which nutrition interventions provide the strongest evidence for improving insulin resistance and cardiovascular risk, and how do you track outcomes over time?",
-  "How have you used digital health tools such as continuous glucose monitoring, nutrition tracking apps, or telehealth platforms to improve dietary adherence and clinical outcomes?",
-  "Explain how artificial intelligence and machine learning could transform clinical nutrition practice. What are the limitations and ethical concerns associated with AI-driven nutrition planning?",
-  "Describe your experience with advanced biochemical assessments such as metabolomics, proteomics, or genetic testing. How do you integrate these data responsibly into clinical decision-making?",
-  "How do you address ethical challenges when evidence-based nutrition recommendations conflict with a patient’s cultural, religious, or personal beliefs?",
-  "Discuss ethical dilemmas related to the promotion of supplements or functional foods, particularly in vulnerable populations. How do you ensure patient safety and informed consent?",
-  "How do you respond to pressure from patients or organizations to promote popular or restrictive diets when robust clinical evidence is lacking?",
-  "Describe how you would manage a patient requesting an extremely restrictive diet that poses significant health risks. How do you communicate risk while maintaining a therapeutic relationship?",
-];
+  // Radiation Protection
+  "Explain the fundamental principles of radiation protection (time, distance, and shielding) and how they are applied in daily radiology practice.",
+  "Describe deterministic and stochastic radiation effects. Provide clinical examples of each.",
+  "How do you optimize radiation dose according to the ALARA principle while maintaining diagnostic image quality?",
+  "Discuss radiation dose monitoring, dose reference levels (DRLs), and their importance in quality assurance.",
+  "How would you manage radiation exposure in pregnant patients and healthcare workers?",
 
+  // X-Ray
+  "Explain the physics of X-ray production and factors affecting image quality.",
+  "Describe the interpretation of a chest radiograph using a systematic approach.",
+  "What are common positioning errors in conventional radiography and how do they affect diagnosis?",
+  "Discuss indications, contraindications, and limitations of plain radiography.",
+  "How do exposure factors (kVp, mAs) influence image quality and patient dose?",
+
+  // CT
+  "Explain the principles of CT image acquisition and reconstruction.",
+  "Discuss CT dose indices (CTDI, DLP) and methods for dose reduction.",
+  "Describe the indications and contraindications for intravenous contrast administration in CT.",
+  "How do you evaluate acute stroke using CT imaging?",
+  "Discuss the role of CT in trauma imaging and emergency radiology.",
+
+  // MRI
+  "Explain the basic physics of MRI, including T1, T2, and proton density weighting.",
+  "Describe MRI safety considerations, including implants, pacemakers, and contrast agents.",
+  "Discuss common MRI sequences and their clinical applications.",
+  "How would you approach the interpretation of an MRI brain study?",
+  "Explain the risks, prevention, and management of nephrogenic systemic fibrosis (NSF).",
+
+  // Ultrasound
+  "Describe the physical principles of ultrasound image formation.",
+  "Explain Doppler ultrasound and its clinical applications.",
+  "Discuss the advantages and limitations of ultrasound compared with other imaging modalities.",
+  "How do you evaluate a patient with suspected deep vein thrombosis using ultrasound?",
+  "Describe common ultrasound artifacts and their diagnostic significance.",
+
+  // Nuclear Medicine
+  "Explain the basic principles of nuclear medicine imaging and radiopharmaceuticals.",
+  "Discuss the clinical applications of PET/CT and SPECT imaging.",
+  "Describe radiation safety considerations in nuclear medicine departments.",
+  "How would you interpret a bone scan in a patient with suspected metastatic disease?",
+  "Discuss indications and limitations of FDG PET/CT in oncology.",
+
+  // Angiography
+  "Explain the principles and indications of diagnostic angiography.",
+  "Discuss the risks and complications associated with angiographic procedures.",
+  "Describe the role of angiography in the diagnosis and management of vascular diseases.",
+  "How would you evaluate peripheral arterial disease using angiographic techniques?",
+  "Discuss contrast-induced nephropathy and strategies for prevention.",
+
+  // Fluoroscopy
+  "Explain the principles of fluoroscopic imaging and radiation dose management.",
+  "Discuss common fluoroscopic procedures and their clinical indications.",
+  "How do you minimize radiation exposure during prolonged fluoroscopic examinations?",
+  "Describe the role of fluoroscopy in gastrointestinal imaging.",
+  "Discuss quality control measures for fluoroscopic equipment.",
+
+  // General Anatomy
+  "Identify major anatomical structures on a normal chest radiograph.",
+  "Describe cross-sectional anatomy of the brain as seen on CT and MRI.",
+  "Explain the anatomy of the abdomen and pelvis relevant to radiologic interpretation.",
+  "Describe musculoskeletal anatomy commonly assessed in diagnostic imaging.",
+  "Discuss vascular anatomy relevant to angiographic procedures.",
+
+  // Patient Safety
+  "How do you manage a patient who develops an acute contrast media reaction?",
+  "Discuss patient identification and imaging safety protocols.",
+  "Explain informed consent requirements for radiological procedures.",
+  "Describe the management of incidental findings with potential clinical significance.",
+  "How do you handle medical emergencies occurring within the radiology department?",
+
+  // Professionalism and Ethics
+  "Discuss ethical responsibilities of a radiologist when communicating significant or unexpected findings.",
+  "How would you manage a disagreement with a referring physician regarding imaging interpretation?",
+  "Describe the importance of confidentiality and data protection in radiology practice.",
+  "How do you address conflicts of interest in imaging referrals or reporting?",
+  "Discuss professionalism, teamwork, and leadership within a multidisciplinary healthcare environment.",
+
+  // Comprehensive Cases
+  "A pregnant patient presents with suspected pulmonary embolism. Discuss the most appropriate imaging approach, radiation considerations, and differential diagnosis.",
+  "A trauma patient arrives in the emergency department. Explain your imaging strategy and prioritization of studies.",
+  "Describe your approach to evaluating an incidental liver lesion identified on imaging.",
+  "A patient with chronic kidney disease requires contrast-enhanced imaging. Discuss risk assessment and management.",
+  "Explain how you would investigate and report a suspected intracranial hemorrhage using appropriate imaging modalities."
+];
